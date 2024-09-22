@@ -1,6 +1,6 @@
 ## Bombreak
 
-Be the last alive
+This is a C++ game project created while attending the scientific high school "A. Oriani" in Ravenna, Italy.
 
 ## How to play
 
