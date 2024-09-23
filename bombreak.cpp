@@ -11,13 +11,13 @@ ifstream tabfile;
 
 void tab_print(int N1, int N2) {
 	system("clear");
-	cout << "Turno di " << endl << endl;
+	cout << "Turn of " << endl << endl;
 	for (int i = 0; i < N1; i++) { 
 		for (int j = 0; j < N2; j++)
 			cout << tab[i][j];
 		cout << endl;
 	}
-	cout << endl << "Movimenti rimasti: " << "    Movimento: " << endl;
+	cout << endl << "Moves left: " << "    Move: " << endl;
 }
 
 void bomb_normal(int N1, int N2) {
@@ -25,7 +25,7 @@ void bomb_normal(int N1, int N2) {
 	int bj = rand() % N2;
 	if (bj % 2 == 0)
 		if (bj == (N2 - 1)) {
-		  	bj--;
+			bj--;
 		} else {
 			bj++;
 		}
@@ -35,7 +35,7 @@ void bomb_normal(int N1, int N2) {
 	bj = rand() % N2;
 	if (bj % 2 == 0)
 		if (bj == (N2 - 1))
-		  	bj--;
+			bj--;
 		  else
 			bj++;
 	tab[bi][bj] = '#';
@@ -49,7 +49,7 @@ void bomb_casual(int N1, int N2) {
 		int bj = rand() % N2;
 		if (bj % 2 == 0)
 			if (bj == (N2 - 1))
-			  	bj--;
+				bj--;
 			  else
 				bj++;
 		tab[bi][bj] = '#';
@@ -60,42 +60,42 @@ void bomb_casual(int N1, int N2) {
 
 void movement(int N1, int N2, char player, char space) {
 	system("clear");
-	cout << "Turno di " << player << endl << endl;
-		        
+	cout << "Turn of " << player << endl << endl;
+				
 	int pi, pj;			
 	for (int i = 0; i < N1; i++) {		// tab print + pi, pj control
 		for (int j = 0; j < N2; j++) {
 			cout << tab [i] [j];
 			if (tab[i][j] == player) {
 				pi = i;
-			    pj = j;
+				pj = j;
 			}
 		}
 		cout << endl;
 	}
 	cout << endl;
-    
+	
 	int moves = rand() % 4 + 1;
 	while (moves != 0) {
-		cout << "Movimenti rimasti: " << moves << "    Movimento: ";
+		cout << "Moves left: " << moves << "    Move: ";
 		char move;
 		cin >> move;
 		
 		if (move == 'w' && pi != 0) {     // w
-		    if (tab[pi - 1][pj] == '#') {
-		    	tab[pi][pj] = space;
-		    	break;
+			if (tab[pi - 1][pj] == '#') {
+				tab[pi][pj] = space;
+				break;
 			}
-		    else {
-		    	tab[pi - 1][pj] = player;
+			else {
+				tab[pi - 1][pj] = player;
 				tab[pi][pj] = space;
 				moves --;
 			}	
 		}
 		if (move == 's' && pi != (N1 - 1)) {     // s
 			if (tab[pi + 1][pj] == '#') {
-			    tab[pi][pj] = space;
-			   	break;
+				tab[pi][pj] = space;
+				break;
 			}
 			else {
 				tab[pi + 1][pj] = player;
@@ -104,9 +104,9 @@ void movement(int N1, int N2, char player, char space) {
 			}
 		}
 		if (move == 'd' && pj != (N2 - 2)) {     // d
-		    if (tab[pi][pj + 2] == '#') {
-			    tab[pi][pj] = space;
-			   	break;
+			if (tab[pi][pj + 2] == '#') {
+				tab[pi][pj] = space;
+				break;
 			}
 			else {
 				tab[pi][pj + 2] = player;
@@ -116,8 +116,8 @@ void movement(int N1, int N2, char player, char space) {
 		}
 		if (move == 'a' && pj != 1) {     // a
 			if (tab[pi][pj - 2] == '#') {
-			    tab[pi][pj] = space;
-			   	break;
+				tab[pi][pj] = space;
+				break;
 			}
 			else {
 				tab[pi][pj - 2] = player;
@@ -128,13 +128,13 @@ void movement(int N1, int N2, char player, char space) {
 		
 		system("clear");
 		
-        cout << "Turno di " << player << endl << endl;			
+		cout << "Turn of " << player << endl << endl;			
 			for (int i = 0; i < N1; i++) {
 				for (int j = 0; j < N2; j++) {
 					cout << tab[i][j];
 					if (tab [i] [j] == player) {
 						pi = i;
-					    pj = j;
+						pj = j;
 					}
 				}
 				cout << endl;
@@ -153,29 +153,29 @@ bool alive (int N1, int N2, char player) {
 
 bool winner (int N1, int N2, char p1, char p2, char p3, char p4) {
 	if (alive(N1, N2, p1) && !alive(N1, N2, p2) && !alive(N1, N2, p3) && !alive(N1, N2, p4)) {
-			cout << endl << "             " << p1 << " VINCE !!!" << endl;
+			cout << endl << "             " << p1 << " WINS !!!" << endl;
 			return true;
 		}
 		else 
 			if (!alive(N1, N2, p1) && alive(N1, N2, p2) && !alive(N1, N2, p3) && !alive(N1, N2, p4)) {
-				cout << endl << "             " << p2 << " VINCE !!!" << endl;
+				cout << endl << "             " << p2 << " WINS !!!" << endl;
 				return true;
 			}
 			else 
 				if (!alive(N1, N2, p1) && !alive(N1, N2, p2) && alive(N1, N2, p3) && !alive(N1, N2, p4)) {
-					cout << endl << "             " << p3 << " VINCE !!!" << endl;
+					cout << endl << "             " << p3 << " WINS !!!" << endl;
 					return true;
 				}
-		    	else 
+				else 
 					if (!alive(N1, N2, p1) && !alive(N1, N2, p2) && !alive(N1, N2, p3) && alive(N1, N2, p4)) {
-						cout << endl << "             " << p4 << " VINCE !!!" << endl;
+						cout << endl << "             " << p4 << " WINS !!!" << endl;
 						return true;
 					}
 					else
-					    if (!alive(N1, N2, p1) && !alive(N1, N2, p2) && !alive(N1, N2, p3) && !alive(N1, N2, p4)) {
-						    cout << endl << "               PAREGGIO" << endl;
-						    return true;
-					    }
+						if (!alive(N1, N2, p1) && !alive(N1, N2, p2) && !alive(N1, N2, p3) && !alive(N1, N2, p4)) {
+							cout << endl << "               DRAW" << endl;
+							return true;
+						}
 	return false;
 }
 
@@ -209,12 +209,12 @@ int main () {
 		int mode_ok = 0;
 		while (!mode_ok) {
 			system("clear");
-	        cout << "|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|" << endl << "|_|_|_|_|_|_|_|_|B|O|M|B|R|E|A|K|_|_|_|_|_|_|_|_|" << endl << "|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|" << endl;
+			cout << "|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|" << endl << "|_|_|_|_|_|_|_|_|B|O|M|B|R|E|A|K|_|_|_|_|_|_|_|_|" << endl << "|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|" << endl;
 			cout << "Enter the name of the game field --> " << tabname << endl;
 			cout << "Enter game mode (1 = normal | 2 = casual) --> ";
 			cin >> gamemode;
 			if (gamemode == 1 || gamemode == 2)
-			    mode_ok = 1;
+				mode_ok = 1;
 		}		
 		
 		char space = tab[0][3];
@@ -227,35 +227,35 @@ int main () {
 		
 		while (!winner(N1, N2, p1, p2, p3, p4)) {
 			// Round of p1
-		    player = p1;
+			player = p1;
 			if (alive(N1, N2, player))     
 				movement(N1, N2, player, space);
-	        turn_counter ++;
+			turn_counter ++;
 	
 			if (gamemode == 1)
-			    bomb_normal(N1, N2);
+				bomb_normal(N1, N2);
 			if (gamemode == 2)
-			    bomb_casual(N1, N2);
+				bomb_casual(N1, N2);
 			tab_print (N1, N2);
 			if (winner (N1, N2, p1, p2, p3, p4))
-			    break;
+				break;
 			
 			// Round of p2
 			player = p2;
 			if (alive (N1, N2, player))     	    
 				movement(N1, N2, player, space);	
-	        turn_counter ++;
-	        
-	        if (gamemode == 1)
-	        	bomb_normal(N1, N2);
-	        if (gamemode == 2)
-			    bomb_casual(N1, N2);
+			turn_counter ++;
+			
+			if (gamemode == 1)
+				bomb_normal(N1, N2);
+			if (gamemode == 2)
+				bomb_casual(N1, N2);
 			tab_print(N1, N2);     
-	        if (winner(N1, N2, p1, p2, p3, p4))
-			    break;
+			if (winner(N1, N2, p1, p2, p3, p4))
+				break;
 	
 			// Round of p3
-	        player = p3;
+			player = p3;
 			if (alive(N1, N2, player))
 				movement(N1, N2, player, space);
 			turn_counter ++;	
@@ -263,10 +263,10 @@ int main () {
 			if (gamemode == 1)
 				bomb_normal(N1, N2);
 			if (gamemode == 2)
-			    bomb_casual(N1, N2);
+				bomb_casual(N1, N2);
 			tab_print(N1, N2);   
 			if (winner(N1, N2, p1, p2, p3, p4))
-			    break;
+				break;
 			
 			// Round of p4
 			player = p4;
@@ -277,18 +277,18 @@ int main () {
 			if (gamemode == 1)
 				bomb_normal (N1, N2);
 			if (gamemode == 2)
-			    bomb_casual (N1, N2);
+				bomb_casual (N1, N2);
 			tab_print(N1, N2);    
 			if (winner(N1, N2, p1, p2, p3, p4))
-			    break;
+				break;
 		}
 		
 		cout << endl << "Rounds played = " << turn_counter << endl << "Play again? (Yes = 1, No = 0) --> ";
 		cin >> play;
-    }
-    
-    system("clear");
-    cout << "Bye!" << endl;
+	}
+	
+	system("clear");
+	cout << "Bye!" << endl;
 	
 	return 0;
 }
