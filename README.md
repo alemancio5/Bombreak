@@ -2,6 +2,11 @@
 
 This is a C++ game project created while attending the scientific high school "A. Oriani" in Ravenna, Italy.
 
+## Use
+
+1) Build the project using make in the terminal in the project folder.
+2) Run the project using ./Bombreak in the terminal in the project folder.
+
 ## How to play
 
 1) Choose a table where to play.
