@@ -1,8 +1,8 @@
 CXX = g++
 CXXFLAGS = -std=c++17
 
-TARGET = bombreak
-SOURCES = bombreak.cpp
+TARGET = Bombreak
+SOURCES = Bombreak.cpp
 
 all: $(TARGET)
 
