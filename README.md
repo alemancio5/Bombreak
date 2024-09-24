@@ -4,8 +4,8 @@ This is a C++ game project created while attending the scientific high school "A
 
 ## Use
 
-1) Build the project using "make" in the terminal in the project folder.
-2) Run the project using "./Bombreak" in the terminal in the project folder.
+1) Build the project using "cmake build" in the terminal in the project folder.
+2) Run the project using "./build/Bombreak" in the terminal in the project folder.
 
 ## How to play
 
