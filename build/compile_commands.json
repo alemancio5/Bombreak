@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/alessandromancini/Ale/Coding/Progetti Visual Studio Code/Bombreak/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk -o CMakeFiles/Bombreak.dir/Bombreak.cpp.o -c \"/Users/alessandromancini/Ale/Coding/Progetti Visual Studio Code/Bombreak/Bombreak.cpp\"",
+  "file": "/Users/alessandromancini/Ale/Coding/Progetti Visual Studio Code/Bombreak/Bombreak.cpp",
+  "output": "CMakeFiles/Bombreak.dir/Bombreak.cpp.o"
+}
+]
