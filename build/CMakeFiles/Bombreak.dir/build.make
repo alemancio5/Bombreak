@@ -73,15 +73,15 @@ CMakeFiles/Bombreak.dir/Bombreak.cpp.o: CMakeFiles/Bombreak.dir/flags.make
 CMakeFiles/Bombreak.dir/Bombreak.cpp.o: /Users/alessandromancini/Ale/Coding/Progetti\ Visual\ Studio\ Code/Bombreak/Bombreak.cpp
 CMakeFiles/Bombreak.dir/Bombreak.cpp.o: CMakeFiles/Bombreak.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/alessandromancini/Ale/Coding/Progetti Visual Studio Code/Bombreak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Bombreak.dir/Bombreak.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Bombreak.dir/Bombreak.cpp.o -MF CMakeFiles/Bombreak.dir/Bombreak.cpp.o.d -o CMakeFiles/Bombreak.dir/Bombreak.cpp.o -c "/Users/alessandromancini/Ale/Coding/Progetti Visual Studio Code/Bombreak/Bombreak.cpp"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Bombreak.dir/Bombreak.cpp.o -MF CMakeFiles/Bombreak.dir/Bombreak.cpp.o.d -o CMakeFiles/Bombreak.dir/Bombreak.cpp.o -c "/Users/alessandromancini/Ale/Coding/Progetti Visual Studio Code/Bombreak/Bombreak.cpp"
 
 CMakeFiles/Bombreak.dir/Bombreak.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Bombreak.dir/Bombreak.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/alessandromancini/Ale/Coding/Progetti Visual Studio Code/Bombreak/Bombreak.cpp" > CMakeFiles/Bombreak.dir/Bombreak.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/alessandromancini/Ale/Coding/Progetti Visual Studio Code/Bombreak/Bombreak.cpp" > CMakeFiles/Bombreak.dir/Bombreak.cpp.i
 
 CMakeFiles/Bombreak.dir/Bombreak.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Bombreak.dir/Bombreak.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/alessandromancini/Ale/Coding/Progetti Visual Studio Code/Bombreak/Bombreak.cpp" -o CMakeFiles/Bombreak.dir/Bombreak.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/alessandromancini/Ale/Coding/Progetti Visual Studio Code/Bombreak/Bombreak.cpp" -o CMakeFiles/Bombreak.dir/Bombreak.cpp.s
 
 # Object files for target Bombreak
 Bombreak_OBJECTS = \
