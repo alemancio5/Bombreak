@@ -1,3 +1,3 @@
-/Users/alessandromancini/Ale/Coding/Progetti Visual Studio Code/Bombreak/build/CMakeFiles/Bombreak.dir
-/Users/alessandromancini/Ale/Coding/Progetti Visual Studio Code/Bombreak/build/CMakeFiles/edit_cache.dir
-/Users/alessandromancini/Ale/Coding/Progetti Visual Studio Code/Bombreak/build/CMakeFiles/rebuild_cache.dir
+/Users/alessandromancini/Ale/Coding/Progetti VSC/Bombreak/build/CMakeFiles/Bombreak.dir
+/Users/alessandromancini/Ale/Coding/Progetti VSC/Bombreak/build/CMakeFiles/edit_cache.dir
+/Users/alessandromancini/Ale/Coding/Progetti VSC/Bombreak/build/CMakeFiles/rebuild_cache.dir

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/alessandromancini/Ale/Coding/Progetti Visual Studio Code/Bombreak/Bombreak.cpp" "CMakeFiles/Bombreak.dir/Bombreak.cpp.o" "gcc" "CMakeFiles/Bombreak.dir/Bombreak.cpp.o.d"
+  "/Users/alessandromancini/Ale/Coding/Progetti VSC/Bombreak/Bombreak.cpp" "CMakeFiles/Bombreak.dir/Bombreak.cpp.o" "gcc" "CMakeFiles/Bombreak.dir/Bombreak.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
